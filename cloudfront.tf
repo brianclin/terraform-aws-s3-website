@@ -1,27 +1,27 @@
 locals {
   origin = {
     true = {
-    s3_oac = {
-      domain_name           = aws_s3_bucket.this.bucket_regional_domain_name
-      origin_access_control = var.bucket_name
-    }
+      s3_oac = {
+        domain_name           = aws_s3_bucket.this.bucket_regional_domain_name
+        origin_access_control = var.bucket_name
+      }
 
-    api_gateway = {
-      domain_name = trimsuffix(trimprefix(var.api_gateway_invoke_url, "https://"), "/")
-      custom_origin_config = {
-        http_port              = 80
-        https_port             = 443
-        origin_protocol_policy = "https-only"
-        origin_ssl_protocols   = ["TLSv1", "TLSv1.1", "TLSv1.2"]
+      api_gateway = {
+        domain_name = trimsuffix(trimprefix(var.api_gateway_invoke_url, "https://"), "/")
+        custom_origin_config = {
+          http_port              = 80
+          https_port             = 443
+          origin_protocol_policy = "https-only"
+          origin_ssl_protocols   = ["TLSv1", "TLSv1.1", "TLSv1.2"]
+        }
       }
     }
-  }
-  false = {
-    s3_oac = {
-      domain_name           = aws_s3_bucket.this.bucket_regional_domain_name
-      origin_access_control = var.bucket_name
+    false = {
+      s3_oac = {
+        domain_name           = aws_s3_bucket.this.bucket_regional_domain_name
+        origin_access_control = var.bucket_name
+      }
     }
-  }
   }
 }
 
@@ -45,7 +45,7 @@ module "cdn" {
   aliases                      = [var.domain_name, "www.${var.domain_name}"]
   create_origin_access_control = true
   origin_access_control = {
-    "${var.bucket_name}" = {
+    (var.bucket_name) = {
       description      = "CloudFront access to S3"
       origin_type      = "s3"
       signing_behavior = "always"
