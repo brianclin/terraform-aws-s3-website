@@ -48,8 +48,18 @@ data "aws_iam_policy_document" "cloudfront" {
 resource "aws_s3_object" "html" {
   bucket        = aws_s3_bucket.this.id
   key           = "index.html"
-  source        = "index.html"
+  source        = var.index_html_source
   etag          = filemd5("index.html")
   content_type  = "text/html"
   cache_control = "public, max-age=31536000"
+}
+
+resource "aws_s3_object" "svg" {
+  for_each      = fileset("./assets/svg", "**")
+  bucket        = aws_s3_bucket.this.id
+  key           = "/assets/svg/${each.value}"
+  source        = "./assets/svg/${each.value}"
+  etag          = filemd5("./assets/svg/${each.value}")
+  cache_control = "public, max-age=31536000"
+  content_type  = "image/svg+xml"
 }

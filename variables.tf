@@ -21,3 +21,8 @@ variable "api_gateway_invoke_url" {
   type = string
   default = ""
 }
+
+variable "index_html_source" {
+  type = string
+  default = "index.html"
+}
