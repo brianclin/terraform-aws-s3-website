@@ -49,7 +49,7 @@ resource "aws_s3_object" "html" {
   bucket        = aws_s3_bucket.this.id
   key           = "index.html"
   source        = var.index_html_source
-  etag          = filemd5("index.html")
+  etag          = filemd5(var.index_html_source)
   content_type  = "text/html"
   cache_control = "public, max-age=31536000"
 }
