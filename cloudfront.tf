@@ -1,5 +1,6 @@
 locals {
-  origin = var.enable_count_api ? {
+  origin = {
+    true = {
     s3_oac = {
       domain_name           = aws_s3_bucket.this.bucket_regional_domain_name
       origin_access_control = var.bucket_name
@@ -14,13 +15,13 @@ locals {
         origin_ssl_protocols   = ["TLSv1", "TLSv1.1", "TLSv1.2"]
       }
     }
-  } : {
+  }
+  false = {
     s3_oac = {
       domain_name           = aws_s3_bucket.this.bucket_regional_domain_name
       origin_access_control = var.bucket_name
     }
-
-    api_gateway = null
+  }
   }
 }
 
@@ -52,7 +53,7 @@ module "cdn" {
     }
   }
 
-  origin = local.origin
+  origin = local.origin[var.enable_count_api]
 
   default_cache_behavior = {
     target_origin_id       = "s3_oac"
