@@ -52,12 +52,7 @@ module "cdn" {
     }
   }
 
-  origin = {
-    s3_oac = {
-      domain_name           = aws_s3_bucket.this.bucket_regional_domain_name
-      origin_access_control = var.bucket_name
-    }
-  }
+  origin = local.origin
 
   default_cache_behavior = {
     target_origin_id       = "s3_oac"
