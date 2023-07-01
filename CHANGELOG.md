@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.0.0...v1.1.0) (2023-07-01)
+
+
+### Features
+
+* add CNAME for www to root ([900b4c3](https://github.com/brianclin/terraform-aws-s3-website/commit/900b4c34e5ea6f94eb1fc679a65acf5e1080e380))
+
 ## 1.0.0 (2023-06-30)
 
 
