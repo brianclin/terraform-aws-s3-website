@@ -8,7 +8,7 @@ resource "aws_route53_record" "root" {
   count = var.create_hosted_zone ? 1 : 0
 
   zone_id = aws_route53_zone.primary[0].zone_id
-  name    = "brianclin.dev"
+  name    = var.domain_name
   type    = "A"
   alias {
     name                   = module.cdn.cloudfront_distribution_domain_name
@@ -21,7 +21,7 @@ resource "aws_route53_record" "www" {
   count = var.create_hosted_zone ? 1 : 0
 
   zone_id = aws_route53_zone.primary[0].zone_id
-  name    = "www"
+  name    = "www.${var.domain_name}"
   type    = "CNAME"
-  records = ["brianclin.dev"]
+  records = [var.domain_name]
 }
