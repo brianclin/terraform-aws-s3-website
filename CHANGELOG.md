@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.1.1](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.1.0...v1.1.1) (2023-07-10)
+
+
+### Bug Fixes
+
+* put version constraint in normalized form 4.47 -> 4.47.0 ([da46da2](https://github.com/brianclin/terraform-aws-s3-website/commit/da46da2d33d91110734ed6783268a9af7e3c3c45))
+
 ## [1.1.0](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.0.0...v1.1.0) (2023-07-01)
 
 
