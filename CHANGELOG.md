@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.1.1...v1.2.0) (2023-07-14)
+
+
+### Features
+
+* use wildcard cert ([6170ca2](https://github.com/brianclin/terraform-aws-s3-website/commit/6170ca21506f09edf5ca1e103691adf1e0e89f74))
+
 ### [1.1.1](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.1.0...v1.1.1) (2023-07-10)
 
 
