@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.1](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.4.0...v1.4.1) (2025-11-01)
+
+
+### Bug Fixes
+
+* update key for other html ([3b86ac5](https://github.com/brianclin/terraform-aws-s3-website/commit/3b86ac57b360a77905d4f84062969402054fc182))
+
 ## [1.4.0](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.3.0...v1.4.0) (2025-11-01)
 
 
