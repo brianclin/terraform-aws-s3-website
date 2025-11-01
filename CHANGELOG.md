@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.2.0...v1.3.0) (2025-11-01)
+
+
+### Features
+
+* add other html files ([10cdb0b](https://github.com/brianclin/terraform-aws-s3-website/commit/10cdb0b869ff6e6c0dce29f16156b664482f66e1))
+
 ## [1.2.0](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.1.1...v1.2.0) (2023-07-14)
 
 
