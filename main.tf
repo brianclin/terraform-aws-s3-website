@@ -67,7 +67,7 @@ resource "aws_s3_object" "svg" {
 resource "aws_s3_object" "other_html" {
   for_each      = fileset("./html", "**")
   bucket        = aws_s3_bucket.this.id
-  key           = "/html/${each.value}"
+  key           = each.value
   source        = "./html/${each.value}"
   etag          = filemd5("./html/${each.value}")
   cache_control = "public, max-age=31536000"
