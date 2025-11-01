@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.0](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.3.0...v1.4.0) (2025-11-01)
+
+
+### Features
+
+* add favicon ([98fc32a](https://github.com/brianclin/terraform-aws-s3-website/commit/98fc32aa18d3d4f9f696dd3af924e19b6062f10b))
+
 ## [1.3.0](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.2.0...v1.3.0) (2025-11-01)
 
 
