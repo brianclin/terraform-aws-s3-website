@@ -73,3 +73,13 @@ resource "aws_s3_object" "other_html" {
   cache_control = "public, max-age=31536000"
   content_type  = "text/html"
 }
+
+resource "aws_s3_object" "favicon" {
+  count         = fileexists("favicon.ico") ? 1 : 0
+  bucket        = aws_s3_bucket.this.id
+  key           = "favicon.ico"
+  source        = "favicon.ico"
+  etag          = fileexists("favicon.ico") ? filemd5("favicon.ico") : null
+  cache_control = "public, max-age=31536000"
+  content_type  = "image/x-icon"
+}
