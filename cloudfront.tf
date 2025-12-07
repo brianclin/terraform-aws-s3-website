@@ -40,10 +40,9 @@ data "aws_cloudfront_origin_request_policy" "allviewer_except_host" {
 module "cdn" {
   source = "terraform-aws-modules/cloudfront/aws"
 
-  enabled                      = true
-  default_root_object          = "index.html"
-  aliases                      = [var.domain_name, "www.${var.domain_name}"]
-  create_origin_access_control = true
+  enabled             = true
+  default_root_object = "index.html"
+  aliases             = [var.domain_name, "www.${var.domain_name}"]
   origin_access_control = {
     (var.bucket_name) = {
       description      = "CloudFront access to S3"
