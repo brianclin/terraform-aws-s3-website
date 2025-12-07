@@ -2,8 +2,9 @@ locals {
   origin = {
     true = {
       s3_oac = {
-        domain_name           = aws_s3_bucket.this.bucket_regional_domain_name
-        origin_access_control = var.bucket_name
+        domain_name               = aws_s3_bucket.this.bucket_regional_domain_name
+        origin_access_control     = var.bucket_name
+        origin_access_control_key = var.bucket_name
       }
 
       api_gateway = {
@@ -18,8 +19,9 @@ locals {
     }
     false = {
       s3_oac = {
-        domain_name           = aws_s3_bucket.this.bucket_regional_domain_name
-        origin_access_control = var.bucket_name
+        domain_name               = aws_s3_bucket.this.bucket_regional_domain_name
+        origin_access_control     = var.bucket_name
+        origin_access_control_key = var.bucket_name
       }
     }
   }
