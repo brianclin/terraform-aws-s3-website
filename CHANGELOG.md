@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.3](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.4.2...v1.4.3) (2025-12-07)
+
+
+### Bug Fixes
+
+* use origin_access_control_key ([3ccb06b](https://github.com/brianclin/terraform-aws-s3-website/commit/3ccb06b90ec0e68439010781aaba9eb251288172))
+
 ### [1.4.2](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.4.1...v1.4.2) (2025-12-07)
 
 
