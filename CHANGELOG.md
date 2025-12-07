@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.2](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.4.1...v1.4.2) (2025-12-07)
+
+
+### Bug Fixes
+
+* remove deprecated field ([99637a0](https://github.com/brianclin/terraform-aws-s3-website/commit/99637a0ffbcf064e170aeca3b8afd2fdbf328048))
+
 ### [1.4.1](https://github.com/brianclin/terraform-aws-s3-website/compare/v1.4.0...v1.4.1) (2025-11-01)
 
 
